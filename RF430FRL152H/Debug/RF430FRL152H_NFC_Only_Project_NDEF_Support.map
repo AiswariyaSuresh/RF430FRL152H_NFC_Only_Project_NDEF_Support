@@ -1,0 +1,962 @@
+******************************************************************************
+                  MSP430 Linker PC v20.2.4                     
+******************************************************************************
+>> Linked Thu Sep 16 13:51:57 2021
+
+OUTPUT FILE NAME:   <RF430FRL152H_NFC_Only_Project_NDEF_Support.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 0000fbde
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  SFR                   00000000   00000010  00000000  00000010  RWIX
+  PERIPHERALS_8BIT      00000010   000000f0  00000000  000000f0  RWIX
+  PERIPHERALS_16BIT     00000100   00000100  00000000  00000100  RWIX
+  $BOUND$0x1a08         00001a08   00000001  00000001  00000000  R IX
+  $BOUND$0x1a09         00001a09   00000001  00000001  00000000  R IX
+  $BOUND$0x1a0a         00001a0a   00000001  00000001  00000000  R IX
+  $BOUND$0x1a0b         00001a0b   00000001  00000001  00000000  R IX
+  $BOUND$0x1a0c         00001a0c   00000001  00000001  00000000  R IX
+  $BOUND$0x1a0d         00001a0d   00000001  00000001  00000000  R IX
+  RAM                   00001c00   00001000  0000010b  00000ef5  RWIX
+  RF13M_ROM_ISR         000054d0   00000002  00000000  00000002  RWIX
+  $BOUND$0xf867         0000f867   00000001  00000001  00000000  R IX
+  FRAM_NDEF             0000f868   00000068  00000017  00000051  RWIX
+  FRAM_CODE             0000f8d0   00000700  000003b8  00000348  RWIX
+  JTAGSIGNATURE         0000ffd0   00000004  00000004  00000000  RWIX  ffff 
+  BSLSIGNATURE          0000ffd4   00000004  00000004  00000000  RWIX  ffff 
+  INT00                 0000ffe0   00000002  00000000  00000002  RWIX
+  INT01                 0000ffe2   00000002  00000000  00000002  RWIX
+  INT02                 0000ffe4   00000002  00000000  00000002  RWIX
+  INT03                 0000ffe6   00000002  00000000  00000002  RWIX
+  INT04                 0000ffe8   00000002  00000000  00000002  RWIX
+  INT05                 0000ffea   00000002  00000002  00000000  RWIX
+  INT06                 0000ffec   00000002  00000002  00000000  RWIX
+  INT07                 0000ffee   00000002  00000002  00000000  RWIX
+  INT08                 0000fff0   00000002  00000002  00000000  RWIX
+  INT09                 0000fff2   00000002  00000002  00000000  RWIX
+  INT10                 0000fff4   00000002  00000002  00000000  RWIX
+  INT11                 0000fff6   00000002  00000002  00000000  RWIX
+  INT12                 0000fff8   00000002  00000002  00000000  RWIX
+  INT13                 0000fffa   00000002  00000002  00000000  RWIX
+  INT14                 0000fffc   00000002  00000002  00000000  RWIX
+  RESET                 0000fffe   00000002  00000002  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.TI.bound:DS 
+*          0    00001c00    00000001     UNINITIALIZED
+                  00001c00    00000001     NDEF.obj (.TI.bound:DS)
+
+.TI.bound:PF 
+*          0    00001c0a    00000060     UNINITIALIZED
+                  00001c0a    00000060     NDEF.obj (.TI.bound:PF)
+
+.TI.bound:RF 
+*          0    00001c6a    00000001     UNINITIALIZED
+                  00001c6a    00000001     NDEF.obj (.TI.bound:RF)
+
+.TI.bound:NRX 
+*          0    00001ca4    00000022     UNINITIALIZED
+                  00001ca4    00000022     NDEF.obj (.TI.bound:NRX)
+
+.TI.bound:NTX 
+*          0    00001cc6    00000022     UNINITIALIZED
+                  00001cc6    00000022     NDEF.obj (.TI.bound:NTX)
+
+.TI.bound:EL 
+*          0    00001cf2    00000001     UNINITIALIZED
+                  00001cf2    00000001     NDEF.obj (.TI.bound:EL)
+
+.TI.bound:Firmware_System_Control_Byte 
+*          0    0000f867    00000001     
+                  0000f867    00000001     NDEF.obj (.TI.bound:Firmware_System_Control_Byte)
+
+.TI.bound:NFC_NDEF_Message 
+*          0    0000f868    00000017     
+                  0000f868    00000017     NDEF.obj (.TI.bound:NFC_NDEF_Message)
+
+.TI.persistent 
+*          0    0000f8d0    00000000     UNINITIALIZED
+
+.cio       0    0000f8d0    00000000     UNINITIALIZED
+
+.sysmem    0    0000f8d0    00000000     UNINITIALIZED
+
+.cinit     0    0000f8d0    00000062     
+                  0000f8d0    00000004     (.cinit..TI.bound:DS.load) [load image, compression = zero_init]
+                  0000f8d4    00000004     (.cinit..TI.bound:EL.load) [load image, compression = zero_init]
+                  0000f8d8    00000004     (.cinit..TI.bound:NRX.load) [load image, compression = zero_init]
+                  0000f8dc    00000004     (.cinit..TI.bound:NTX.load) [load image, compression = zero_init]
+                  0000f8e0    00000004     (.cinit..TI.bound:PF.load) [load image, compression = zero_init]
+                  0000f8e4    00000004     (.cinit..TI.bound:RF.load) [load image, compression = zero_init]
+                  0000f8e8    00000004     (.cinit..TI.bound:UID_0.load) [load image, compression = zero_init]
+                  0000f8ec    00000004     (.cinit..TI.bound:UID_1.load) [load image, compression = zero_init]
+                  0000f8f0    00000004     (.cinit..TI.bound:UID_2.load) [load image, compression = zero_init]
+                  0000f8f4    00000004     (.cinit..TI.bound:UID_3.load) [load image, compression = zero_init]
+                  0000f8f8    00000004     (.cinit..TI.bound:UID_4.load) [load image, compression = zero_init]
+                  0000f8fc    00000004     (.cinit..TI.bound:UID_5.load) [load image, compression = zero_init]
+                  0000f900    00000002     (__TI_handler_table)
+                  0000f902    00000030     (__TI_cinit_table)
+
+.pinit     0    0000f932    00000000     UNINITIALIZED
+
+.init_array 
+*          0    0000f932    00000000     UNINITIALIZED
+
+.mspabi.exidx 
+*          0    0000f932    00000000     UNINITIALIZED
+
+.mspabi.extab 
+*          0    0000f932    00000000     UNINITIALIZED
+
+.const     0    0000f932    00000000     UNINITIALIZED
+
+.text      0    0000f932    00000342     
+                  0000f932    000000e4     main.obj (.text:main)
+                  0000fa16    0000004a     patch.obj (.text:GetSystemInfo_Patched)
+                  0000fa60    00000046     patch.obj (.text:GetMultipleBlockSecurityStatus_Patched)
+                  0000faa6    00000042     rts430_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  0000fae8    0000003c     patch.obj (.text:BlockLockROM_Patched)
+                  0000fb24    0000003c     main.obj (.text:DeviceInit)
+                  0000fb60    00000030     patch.obj (.text:userCustomCommand)
+                  0000fb90    0000002c     rts430_eabi.lib : div16s.asm.obj (.text)
+                  0000fbbc    00000022     NDEF.obj (.text:initISO15693)
+                  0000fbde    0000001c     rts430_eabi.lib : boot.c.obj (.text:_c_int00_noargs)
+                  0000fbfa    00000016                     : div16u.asm.obj (.text)
+                  0000fc10    00000014                     : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset:__TI_zero_init_nomemset)
+                  0000fc24    00000014                     : memset.c.obj (.text:memset)
+                  0000fc38    00000014                     : mult16.asm.obj (.text)
+                  0000fc4c    00000010                     : epilog.asm.obj (.text)
+                  0000fc5c    00000008                     : isr_trap.asm.obj (.text:_isr:__TI_ISR_TRAP)
+                  0000fc64    00000006                     : exit.c.obj (.text:abort)
+                  0000fc6a    00000004     NDEF.obj (.text:BlockLockAPI)
+                  0000fc6e    00000004     rts430_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  0000fc72    00000002                     : startup.c.obj (.text:_system_post_cinit)
+
+.rf13m_rom_isr 
+*          0    000054d0    00000002     DSECT
+                  000054d0    00000002     main.obj (.rf13m_rom_isr:RF13M_ISR)
+
+.stack     0    00002b9c    00000064     UNINITIALIZED
+                  00002b9c    00000002     rts430_eabi.lib : boot.c.obj (.stack)
+                  00002b9e    00000062     --HOLE--
+
+.TI.bound:UID_0 
+*          0    00001a08    00000001     UNINITIALIZED
+                  00001a08    00000001     patch.obj (.TI.bound:UID_0)
+
+.TI.bound:UID_1 
+*          0    00001a09    00000001     UNINITIALIZED
+                  00001a09    00000001     patch.obj (.TI.bound:UID_1)
+
+.TI.bound:UID_2 
+*          0    00001a0a    00000001     UNINITIALIZED
+                  00001a0a    00000001     patch.obj (.TI.bound:UID_2)
+
+.TI.bound:UID_3 
+*          0    00001a0b    00000001     UNINITIALIZED
+                  00001a0b    00000001     patch.obj (.TI.bound:UID_3)
+
+.TI.bound:UID_4 
+*          0    00001a0c    00000001     UNINITIALIZED
+                  00001a0c    00000001     patch.obj (.TI.bound:UID_4)
+
+.TI.bound:UID_5 
+*          0    00001a0d    00000001     UNINITIALIZED
+                  00001a0d    00000001     patch.obj (.TI.bound:UID_5)
+
+.TI.bound:END_KEY 
+*          0    0000ffbc    00000002     
+                  0000ffbc    00000002     patch.obj (.TI.bound:END_KEY)
+
+.TI.bound:BlockLockROMAddress 
+*          0    0000ffbe    00000002     
+                  0000ffbe    00000002     patch.obj (.TI.bound:BlockLockROMAddress)
+
+.TI.bound:BlockLockROMID 
+*          0    0000ffc0    00000002     
+                  0000ffc0    00000002     patch.obj (.TI.bound:BlockLockROMID)
+
+.TI.bound:GetMultipleBlockSecurityStatusAddress 
+*          0    0000ffc2    00000002     
+                  0000ffc2    00000002     patch.obj (.TI.bound:GetMultipleBlockSecurityStatusAddress)
+
+.TI.bound:GetMultipleBlockSecurityStatusID 
+*          0    0000ffc4    00000002     
+                  0000ffc4    00000002     patch.obj (.TI.bound:GetMultipleBlockSecurityStatusID)
+
+.TI.bound:GetSystemInfoAddress 
+*          0    0000ffc6    00000002     
+                  0000ffc6    00000002     patch.obj (.TI.bound:GetSystemInfoAddress)
+
+.TI.bound:GetSystemInfoID 
+*          0    0000ffc8    00000002     
+                  0000ffc8    00000002     patch.obj (.TI.bound:GetSystemInfoID)
+
+.TI.bound:CustomCommandAddress 
+*          0    0000ffca    00000002     
+                  0000ffca    00000002     patch.obj (.TI.bound:CustomCommandAddress)
+
+.TI.bound:CustomCommandID 
+*          0    0000ffcc    00000002     
+                  0000ffcc    00000002     patch.obj (.TI.bound:CustomCommandID)
+
+.TI.bound:START_KEY 
+*          0    0000ffce    00000002     
+                  0000ffce    00000002     patch.obj (.TI.bound:START_KEY)
+
+RFPMM      0    0000ffea    00000002     
+                  0000ffea    00000002     rts430_eabi.lib : int05.asm.obj (.int05)
+
+PORT1      0    0000ffec    00000002     
+                  0000ffec    00000002     rts430_eabi.lib : int06.asm.obj (.int06)
+
+SD_ADC     0    0000ffee    00000002     
+                  0000ffee    00000002     rts430_eabi.lib : int07.asm.obj (.int07)
+
+USCI_B0    0    0000fff0    00000002     
+                  0000fff0    00000002     rts430_eabi.lib : int08.asm.obj (.int08)
+
+ISO        0    0000fff2    00000002     
+                  0000fff2    00000002     main.obj (.int09)
+
+WDT        0    0000fff4    00000002     
+                  0000fff4    00000002     rts430_eabi.lib : int10.asm.obj (.int10)
+
+TIMER0_A1 
+*          0    0000fff6    00000002     
+                  0000fff6    00000002     rts430_eabi.lib : int11.asm.obj (.int11)
+
+TIMER0_A0 
+*          0    0000fff8    00000002     
+                  0000fff8    00000002     rts430_eabi.lib : int12.asm.obj (.int12)
+
+UNMI       0    0000fffa    00000002     
+                  0000fffa    00000002     rts430_eabi.lib : int13.asm.obj (.int13)
+
+SYSNMI     0    0000fffc    00000002     
+                  0000fffc    00000002     rts430_eabi.lib : int14.asm.obj (.int14)
+
+.reset     0    0000fffe    00000002     
+                  0000fffe    00000002     rts430_eabi.lib : boot.c.obj (.reset)
+
+$fill000   0    0000ffd0    00000004     
+                  0000ffd0    00000004     --HOLE-- [fill = ffff]
+
+$fill001   0    0000ffd4    00000004     
+                  0000ffd4    00000004     --HOLE-- [fill = ffff]
+
+MODULE SUMMARY
+
+       Module                 code   ro data   rw data
+       ------                 ----   -------   -------
+    .\
+       main.obj               288    2         0      
+       patch.obj              252    20        6      
+       NDEF.obj               38     24        167    
+    +--+----------------------+------+---------+---------+
+       Total:                 578    46        173    
+                                                      
+    C:\ti\ccs1031\ccs\tools\compiler\ti-cgt-msp430_20.2.4.LTS\lib\rts430_eabi.lib
+       autoinit.c.obj         66     0         0      
+       div16s.asm.obj         44     0         0      
+       boot.c.obj             28     2         0      
+       div16u.asm.obj         22     0         0      
+       copy_zero_init.c.obj   20     0         0      
+       memset.c.obj           20     0         0      
+       mult16.asm.obj         20     0         0      
+       epilog.asm.obj         16     0         0      
+       isr_trap.asm.obj       8      0         0      
+       exit.c.obj             6      0         0      
+       pre_init.c.obj         4      0         0      
+       int05.asm.obj          0      2         0      
+       int06.asm.obj          0      2         0      
+       int07.asm.obj          0      2         0      
+       int08.asm.obj          0      2         0      
+       int10.asm.obj          0      2         0      
+       int11.asm.obj          0      2         0      
+       int12.asm.obj          0      2         0      
+       int13.asm.obj          0      2         0      
+       int14.asm.obj          0      2         0      
+       startup.c.obj          2      0         0      
+    +--+----------------------+------+---------+---------+
+       Total:                 256    20        0      
+                                                      
+       Stack:                 0      0         100    
+       Linker Generated:      0      98        0      
+    +--+----------------------+------+---------+---------+
+       Grand Total:           834    164       273    
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 0000f902 records: 12, size/record: 4, table size: 48
+	.TI.bound:DS: load addr=0000f8d0, load size=00000004 bytes, run addr=00001c00, run size=00000001 bytes, compression=zero_init
+	.TI.bound:EL: load addr=0000f8d4, load size=00000004 bytes, run addr=00001cf2, run size=00000001 bytes, compression=zero_init
+	.TI.bound:NRX: load addr=0000f8d8, load size=00000004 bytes, run addr=00001ca4, run size=00000022 bytes, compression=zero_init
+	.TI.bound:NTX: load addr=0000f8dc, load size=00000004 bytes, run addr=00001cc6, run size=00000022 bytes, compression=zero_init
+	.TI.bound:PF: load addr=0000f8e0, load size=00000004 bytes, run addr=00001c0a, run size=00000060 bytes, compression=zero_init
+	.TI.bound:RF: load addr=0000f8e4, load size=00000004 bytes, run addr=00001c6a, run size=00000001 bytes, compression=zero_init
+	.TI.bound:UID_0: load addr=0000f8e8, load size=00000004 bytes, run addr=00001a08, run size=00000001 bytes, compression=zero_init
+	.TI.bound:UID_1: load addr=0000f8ec, load size=00000004 bytes, run addr=00001a09, run size=00000001 bytes, compression=zero_init
+	.TI.bound:UID_2: load addr=0000f8f0, load size=00000004 bytes, run addr=00001a0a, run size=00000001 bytes, compression=zero_init
+	.TI.bound:UID_3: load addr=0000f8f4, load size=00000004 bytes, run addr=00001a0b, run size=00000001 bytes, compression=zero_init
+	.TI.bound:UID_4: load addr=0000f8f8, load size=00000004 bytes, run addr=00001a0c, run size=00000001 bytes, compression=zero_init
+	.TI.bound:UID_5: load addr=0000f8fc, load size=00000004 bytes, run addr=00001a0d, run size=00000001 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 0000f900 records: 1, size/record: 2, table size: 2
+	index: 0, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                                  
+-------   ----                                  
+0000fc6a  BlockLockAPI                          
+0000ffbe  BlockLockROMAddress                   
+0000ffc0  BlockLockROMID                        
+0000fae8  BlockLockROM_Patched                  
+0000fc64  C$$EXIT                               
+00000160  CCSCTL0                               
+00000161  CCSCTL0_H                             
+00000160  CCSCTL0_L                             
+00000162  CCSCTL1                               
+00000163  CCSCTL1_H                             
+00000162  CCSCTL1_L                             
+00000164  CCSCTL2                               
+00000165  CCSCTL2_H                             
+00000164  CCSCTL2_L                             
+00000168  CCSCTL4                               
+00000169  CCSCTL4_H                             
+00000168  CCSCTL4_L                             
+0000016a  CCSCTL5                               
+0000016b  CCSCTL5_H                             
+0000016a  CCSCTL5_L                             
+0000016c  CCSCTL6                               
+0000016d  CCSCTL6_H                             
+0000016c  CCSCTL6_L                             
+0000016e  CCSCTL7                               
+0000016f  CCSCTL7_H                             
+0000016e  CCSCTL7_L                             
+00000170  CCSCTL8                               
+00000171  CCSCTL8_H                             
+00000170  CCSCTL8_L                             
+00000150  CRCDI                                 
+00000152  CRCDIRB                               
+00000153  CRCDIRB_H                             
+00000152  CRCDIRB_L                             
+00000151  CRCDI_H                               
+00000150  CRCDI_L                               
+00000154  CRCINIRES                             
+00000155  CRCINIRES_H                           
+00000154  CRCINIRES_L                           
+00000156  CRCRESR                               
+00000157  CRCRESR_H                             
+00000156  CRCRESR_L                             
+0000ffca  CustomCommandAddress                  
+0000ffcc  CustomCommandID                       
+00001c00  DS                                    
+0000fb24  DeviceInit                            
+00001cf2  EL                                    
+0000ffbc  END_KEY                               
+0000f867  Firmware_System_Control_Byte          
+0000ffc2  GetMultipleBlockSecurityStatusAddress 
+0000ffc4  GetMultipleBlockSecurityStatusID      
+0000fa60  GetMultipleBlockSecurityStatus_Patched
+0000ffc6  GetSystemInfoAddress                  
+0000ffc8  GetSystemInfoID                       
+0000fa16  GetSystemInfo_Patched                 
+0000f868  NFC_NDEF_Message                      
+00001ca4  NRX                                   
+00001cc6  NTX                                   
+0000020e  P1IV                                  
+0000021e  P2IV                                  
+00000204  PADIR                                 
+00000205  PADIR_H                               
+00000204  PADIR_L                               
+00000208  PADS                                  
+00000209  PADS_H                                
+00000208  PADS_L                                
+0000021a  PAIE                                  
+00000218  PAIES                                 
+00000219  PAIES_H                               
+00000218  PAIES_L                               
+0000021b  PAIE_H                                
+0000021a  PAIE_L                                
+0000021c  PAIFG                                 
+0000021d  PAIFG_H                               
+0000021c  PAIFG_L                               
+00000200  PAIN                                  
+00000201  PAIN_H                                
+00000200  PAIN_L                                
+00000202  PAOUT                                 
+00000203  PAOUT_H                               
+00000202  PAOUT_L                               
+00000206  PAREN                                 
+00000207  PAREN_H                               
+00000206  PAREN_L                               
+0000020a  PASEL0                                
+0000020b  PASEL0_H                              
+0000020a  PASEL0_L                              
+0000020c  PASEL1                                
+0000020d  PASEL1_H                              
+0000020c  PASEL1_L                              
+00001c0a  PF                                    
+00001c6a  RF                                    
+0000080a  RF13MCRC                              
+0000080b  RF13MCRC_H                            
+0000080a  RF13MCRC_L                            
+00000800  RF13MCTL                              
+00000801  RF13MCTL_H                            
+00000800  RF13MCTL_L                            
+0000080c  RF13MFIFOFL                           
+0000080d  RF13MFIFOFL_H                         
+0000080c  RF13MFIFOFL_L                         
+00000802  RF13MINT                              
+00000803  RF13MINT_H                            
+00000802  RF13MINT_L                            
+00000804  RF13MIV                               
+00000805  RF13MIV_H                             
+00000804  RF13MIV_L                             
+00000820  RF13MRXBUF                            
+00000821  RF13MRXBUF_H                          
+00000820  RF13MRXBUF_L                          
+00000806  RF13MRXF                              
+00000807  RF13MRXF_H                            
+00000806  RF13MRXF_L                            
+00000840  RF13MTXBUF                            
+00000841  RF13MTXBUF_H                          
+00000840  RF13MTXBUF_L                          
+00000808  RF13MTXF                              
+00000809  RF13MTXF_H                            
+00000808  RF13MTXF_L                            
+0000080e  RF13MWMCFG                            
+0000080f  RF13MWMCFG_H                          
+0000080e  RF13MWMCFG_L                          
+000054d0  RF13M_ISR                             
+00000124  RFMMIE                                
+00000125  RFMMIE_H                              
+00000124  RFMMIE_L                              
+00000120  RFPMMCTL0                             
+00000121  RFPMMCTL0_H                           
+00000120  RFPMMCTL0_L                           
+00000122  RFPMMCTL1                             
+00000123  RFPMMCTL1_H                           
+00000122  RFPMMCTL1_L                           
+00000126  RFPMMIFG                              
+00000127  RFPMMIFG_H                            
+00000126  RFPMMIFG_L                            
+00000128  RFPMMIV                               
+00000129  RFPMMIV_H                             
+00000128  RFPMMIV_L                             
+00000700  SD14CTL0                              
+00000701  SD14CTL0_H                            
+00000700  SD14CTL0_L                            
+00000702  SD14CTL1                              
+00000703  SD14CTL1_H                            
+00000702  SD14CTL1_L                            
+0000070c  SD14IV                                
+0000070d  SD14IV_H                              
+0000070c  SD14IV_L                              
+00000704  SD14MEM0                              
+00000705  SD14MEM0_H                            
+00000704  SD14MEM0_L                            
+00000706  SD14MEM1                              
+00000707  SD14MEM1_H                            
+00000706  SD14MEM1_L                            
+00000708  SD14MEM2                              
+00000709  SD14MEM2_H                            
+00000708  SD14MEM2_L                            
+0000070a  SD14MEM3                              
+0000070b  SD14MEM3_H                            
+0000070a  SD14MEM3_L                            
+00000100  SFRIE1                                
+00000101  SFRIE1_H                              
+00000100  SFRIE1_L                              
+00000102  SFRIFG1                               
+00000103  SFRIFG1_H                             
+00000102  SFRIFG1_L                             
+00000104  SFRRPCR                               
+00000105  SFRRPCR_H                             
+00000104  SFRRPCR_L                             
+0000ffce  START_KEY                             
+00000198  SYSBERRIV                             
+00000199  SYSBERRIV_H                           
+00000198  SYSBERRIV_L                           
+00000190  SYSCNF                                
+00000191  SYSCNF_H                              
+00000190  SYSCNF_L                              
+00000180  SYSCTL                                
+00000181  SYSCTL_H                              
+00000180  SYSCTL_L                              
+00000186  SYSJMBC                               
+00000187  SYSJMBC_H                             
+00000186  SYSJMBC_L                             
+00000188  SYSJMBI0                              
+00000189  SYSJMBI0_H                            
+00000188  SYSJMBI0_L                            
+0000018a  SYSJMBI1                              
+0000018b  SYSJMBI1_H                            
+0000018a  SYSJMBI1_L                            
+0000018c  SYSJMBO0                              
+0000018d  SYSJMBO0_H                            
+0000018c  SYSJMBO0_L                            
+0000018e  SYSJMBO1                              
+0000018f  SYSJMBO1_H                            
+0000018e  SYSJMBO1_L                            
+0000019e  SYSRSTIV                              
+0000019f  SYSRSTIV_H                            
+0000019e  SYSRSTIV_L                            
+0000019c  SYSSNIV                               
+0000019d  SYSSNIV_H                             
+0000019c  SYSSNIV_L                             
+0000019a  SYSUNIV                               
+0000019b  SYSUNIV_H                             
+0000019a  SYSUNIV_L                             
+00000352  TA0CCR0                               
+00000354  TA0CCR1                               
+00000356  TA0CCR2                               
+00000342  TA0CCTL0                              
+00000344  TA0CCTL1                              
+00000346  TA0CCTL2                              
+00000340  TA0CTL                                
+00000360  TA0EX0                                
+0000036e  TA0IV                                 
+00000350  TA0R                                  
+0000065e  UCB0ADDMASK                           
+0000065f  UCB0ADDMASK_H                         
+0000065e  UCB0ADDMASK_L                         
+0000065c  UCB0ADDRX                             
+0000065d  UCB0ADDRX_H                           
+0000065c  UCB0ADDRX_L                           
+00000646  UCB0BRW                               
+00000647  UCB0BRW_H                             
+00000646  UCB0BRW_L                             
+00000640  UCB0CTLW0                             
+00000641  UCB0CTLW0_H                           
+00000640  UCB0CTLW0_L                           
+00000642  UCB0CTLW1                             
+00000643  UCB0CTLW1_H                           
+00000642  UCB0CTLW1_L                           
+00000654  UCB0I2COA0                            
+00000655  UCB0I2COA0_H                          
+00000654  UCB0I2COA0_L                          
+00000656  UCB0I2COA1                            
+00000657  UCB0I2COA1_H                          
+00000656  UCB0I2COA1_L                          
+00000658  UCB0I2COA2                            
+00000659  UCB0I2COA2_H                          
+00000658  UCB0I2COA2_L                          
+0000065a  UCB0I2COA3                            
+0000065b  UCB0I2COA3_H                          
+0000065a  UCB0I2COA3_L                          
+00000660  UCB0I2CSA                             
+00000661  UCB0I2CSA_H                           
+00000660  UCB0I2CSA_L                           
+0000066a  UCB0IE                                
+0000066b  UCB0IE_H                              
+0000066a  UCB0IE_L                              
+0000066c  UCB0IFG                               
+0000066d  UCB0IFG_H                             
+0000066c  UCB0IFG_L                             
+0000066e  UCB0IV                                
+0000064c  UCB0RXBUF                             
+0000064d  UCB0RXBUF_H                           
+0000064c  UCB0RXBUF_L                           
+00000648  UCB0STATW                             
+00000649  UCB0STATW_H                           
+00000648  UCB0STATW_L                           
+0000064a  UCB0TBCNT                             
+0000064b  UCB0TBCNT_H                           
+0000064a  UCB0TBCNT_L                           
+0000064e  UCB0TXBUF                             
+0000064f  UCB0TXBUF_H                           
+0000064e  UCB0TXBUF_L                           
+00001a08  UID_0                                 
+00001a09  UID_1                                 
+00001a0a  UID_2                                 
+00001a0b  UID_3                                 
+00001a0c  UID_4                                 
+00001a0d  UID_5                                 
+0000015c  WDTCTL                                
+0000015d  WDTCTL_H                              
+0000015c  WDTCTL_L                              
+00002c00  __STACK_END                           
+00000064  __STACK_SIZE                          
+0000f902  __TI_CINIT_Base                       
+0000f932  __TI_CINIT_Limit                      
+0000f900  __TI_Handler_Table_Base               
+0000f902  __TI_Handler_Table_Limit              
+0000fc5c  __TI_ISR_TRAP                         
+0000faa6  __TI_auto_init_nobinit_nopinit        
+0000ffea  __TI_int05                            
+0000ffec  __TI_int06                            
+0000ffee  __TI_int07                            
+0000fff0  __TI_int08                            
+0000fff2  __TI_int09                            
+0000fff4  __TI_int10                            
+0000fff6  __TI_int11                            
+0000fff8  __TI_int12                            
+0000fffa  __TI_int13                            
+0000fffc  __TI_int14                            
+ffffffff  __TI_pprof_out_hndl                   
+ffffffff  __TI_prof_data_size                   
+ffffffff  __TI_prof_data_start                  
+0000fc10  __TI_zero_init_nomemset               
+ffffffff  __c_args__                            
+0000fb90  __mspabi_divi                         
+0000fbfa  __mspabi_divu                         
+0000fc58  __mspabi_func_epilog_1                
+0000fc56  __mspabi_func_epilog_2                
+0000fc54  __mspabi_func_epilog_3                
+0000fc52  __mspabi_func_epilog_4                
+0000fc50  __mspabi_func_epilog_5                
+0000fc4e  __mspabi_func_epilog_6                
+0000fc4c  __mspabi_func_epilog_7                
+0000fc38  __mspabi_mpyi                         
+0000fc38  __mspabi_mpyi_sw                      
+0000fb90  __mspabi_remi                         
+0000fbfa  __mspabi_remu                         
+0000fbde  _c_int00_noargs                       
+0000fffe  _reset_vector                         
+00002b9c  _stack                                
+0000fc72  _system_post_cinit                    
+0000fc6e  _system_pre_init                      
+0000fc64  abort                                 
+0000fbbc  initISO15693                          
+0000f932  main                                  
+0000fc24  memset                                
+0000fb60  userCustomCommand                     
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                                  
+-------   ----                                  
+00000064  __STACK_SIZE                          
+00000100  SFRIE1                                
+00000100  SFRIE1_L                              
+00000101  SFRIE1_H                              
+00000102  SFRIFG1                               
+00000102  SFRIFG1_L                             
+00000103  SFRIFG1_H                             
+00000104  SFRRPCR                               
+00000104  SFRRPCR_L                             
+00000105  SFRRPCR_H                             
+00000120  RFPMMCTL0                             
+00000120  RFPMMCTL0_L                           
+00000121  RFPMMCTL0_H                           
+00000122  RFPMMCTL1                             
+00000122  RFPMMCTL1_L                           
+00000123  RFPMMCTL1_H                           
+00000124  RFMMIE                                
+00000124  RFMMIE_L                              
+00000125  RFMMIE_H                              
+00000126  RFPMMIFG                              
+00000126  RFPMMIFG_L                            
+00000127  RFPMMIFG_H                            
+00000128  RFPMMIV                               
+00000128  RFPMMIV_L                             
+00000129  RFPMMIV_H                             
+00000150  CRCDI                                 
+00000150  CRCDI_L                               
+00000151  CRCDI_H                               
+00000152  CRCDIRB                               
+00000152  CRCDIRB_L                             
+00000153  CRCDIRB_H                             
+00000154  CRCINIRES                             
+00000154  CRCINIRES_L                           
+00000155  CRCINIRES_H                           
+00000156  CRCRESR                               
+00000156  CRCRESR_L                             
+00000157  CRCRESR_H                             
+0000015c  WDTCTL                                
+0000015c  WDTCTL_L                              
+0000015d  WDTCTL_H                              
+00000160  CCSCTL0                               
+00000160  CCSCTL0_L                             
+00000161  CCSCTL0_H                             
+00000162  CCSCTL1                               
+00000162  CCSCTL1_L                             
+00000163  CCSCTL1_H                             
+00000164  CCSCTL2                               
+00000164  CCSCTL2_L                             
+00000165  CCSCTL2_H                             
+00000168  CCSCTL4                               
+00000168  CCSCTL4_L                             
+00000169  CCSCTL4_H                             
+0000016a  CCSCTL5                               
+0000016a  CCSCTL5_L                             
+0000016b  CCSCTL5_H                             
+0000016c  CCSCTL6                               
+0000016c  CCSCTL6_L                             
+0000016d  CCSCTL6_H                             
+0000016e  CCSCTL7                               
+0000016e  CCSCTL7_L                             
+0000016f  CCSCTL7_H                             
+00000170  CCSCTL8                               
+00000170  CCSCTL8_L                             
+00000171  CCSCTL8_H                             
+00000180  SYSCTL                                
+00000180  SYSCTL_L                              
+00000181  SYSCTL_H                              
+00000186  SYSJMBC                               
+00000186  SYSJMBC_L                             
+00000187  SYSJMBC_H                             
+00000188  SYSJMBI0                              
+00000188  SYSJMBI0_L                            
+00000189  SYSJMBI0_H                            
+0000018a  SYSJMBI1                              
+0000018a  SYSJMBI1_L                            
+0000018b  SYSJMBI1_H                            
+0000018c  SYSJMBO0                              
+0000018c  SYSJMBO0_L                            
+0000018d  SYSJMBO0_H                            
+0000018e  SYSJMBO1                              
+0000018e  SYSJMBO1_L                            
+0000018f  SYSJMBO1_H                            
+00000190  SYSCNF                                
+00000190  SYSCNF_L                              
+00000191  SYSCNF_H                              
+00000198  SYSBERRIV                             
+00000198  SYSBERRIV_L                           
+00000199  SYSBERRIV_H                           
+0000019a  SYSUNIV                               
+0000019a  SYSUNIV_L                             
+0000019b  SYSUNIV_H                             
+0000019c  SYSSNIV                               
+0000019c  SYSSNIV_L                             
+0000019d  SYSSNIV_H                             
+0000019e  SYSRSTIV                              
+0000019e  SYSRSTIV_L                            
+0000019f  SYSRSTIV_H                            
+00000200  PAIN                                  
+00000200  PAIN_L                                
+00000201  PAIN_H                                
+00000202  PAOUT                                 
+00000202  PAOUT_L                               
+00000203  PAOUT_H                               
+00000204  PADIR                                 
+00000204  PADIR_L                               
+00000205  PADIR_H                               
+00000206  PAREN                                 
+00000206  PAREN_L                               
+00000207  PAREN_H                               
+00000208  PADS                                  
+00000208  PADS_L                                
+00000209  PADS_H                                
+0000020a  PASEL0                                
+0000020a  PASEL0_L                              
+0000020b  PASEL0_H                              
+0000020c  PASEL1                                
+0000020c  PASEL1_L                              
+0000020d  PASEL1_H                              
+0000020e  P1IV                                  
+00000218  PAIES                                 
+00000218  PAIES_L                               
+00000219  PAIES_H                               
+0000021a  PAIE                                  
+0000021a  PAIE_L                                
+0000021b  PAIE_H                                
+0000021c  PAIFG                                 
+0000021c  PAIFG_L                               
+0000021d  PAIFG_H                               
+0000021e  P2IV                                  
+00000340  TA0CTL                                
+00000342  TA0CCTL0                              
+00000344  TA0CCTL1                              
+00000346  TA0CCTL2                              
+00000350  TA0R                                  
+00000352  TA0CCR0                               
+00000354  TA0CCR1                               
+00000356  TA0CCR2                               
+00000360  TA0EX0                                
+0000036e  TA0IV                                 
+00000640  UCB0CTLW0                             
+00000640  UCB0CTLW0_L                           
+00000641  UCB0CTLW0_H                           
+00000642  UCB0CTLW1                             
+00000642  UCB0CTLW1_L                           
+00000643  UCB0CTLW1_H                           
+00000646  UCB0BRW                               
+00000646  UCB0BRW_L                             
+00000647  UCB0BRW_H                             
+00000648  UCB0STATW                             
+00000648  UCB0STATW_L                           
+00000649  UCB0STATW_H                           
+0000064a  UCB0TBCNT                             
+0000064a  UCB0TBCNT_L                           
+0000064b  UCB0TBCNT_H                           
+0000064c  UCB0RXBUF                             
+0000064c  UCB0RXBUF_L                           
+0000064d  UCB0RXBUF_H                           
+0000064e  UCB0TXBUF                             
+0000064e  UCB0TXBUF_L                           
+0000064f  UCB0TXBUF_H                           
+00000654  UCB0I2COA0                            
+00000654  UCB0I2COA0_L                          
+00000655  UCB0I2COA0_H                          
+00000656  UCB0I2COA1                            
+00000656  UCB0I2COA1_L                          
+00000657  UCB0I2COA1_H                          
+00000658  UCB0I2COA2                            
+00000658  UCB0I2COA2_L                          
+00000659  UCB0I2COA2_H                          
+0000065a  UCB0I2COA3                            
+0000065a  UCB0I2COA3_L                          
+0000065b  UCB0I2COA3_H                          
+0000065c  UCB0ADDRX                             
+0000065c  UCB0ADDRX_L                           
+0000065d  UCB0ADDRX_H                           
+0000065e  UCB0ADDMASK                           
+0000065e  UCB0ADDMASK_L                         
+0000065f  UCB0ADDMASK_H                         
+00000660  UCB0I2CSA                             
+00000660  UCB0I2CSA_L                           
+00000661  UCB0I2CSA_H                           
+0000066a  UCB0IE                                
+0000066a  UCB0IE_L                              
+0000066b  UCB0IE_H                              
+0000066c  UCB0IFG                               
+0000066c  UCB0IFG_L                             
+0000066d  UCB0IFG_H                             
+0000066e  UCB0IV                                
+00000700  SD14CTL0                              
+00000700  SD14CTL0_L                            
+00000701  SD14CTL0_H                            
+00000702  SD14CTL1                              
+00000702  SD14CTL1_L                            
+00000703  SD14CTL1_H                            
+00000704  SD14MEM0                              
+00000704  SD14MEM0_L                            
+00000705  SD14MEM0_H                            
+00000706  SD14MEM1                              
+00000706  SD14MEM1_L                            
+00000707  SD14MEM1_H                            
+00000708  SD14MEM2                              
+00000708  SD14MEM2_L                            
+00000709  SD14MEM2_H                            
+0000070a  SD14MEM3                              
+0000070a  SD14MEM3_L                            
+0000070b  SD14MEM3_H                            
+0000070c  SD14IV                                
+0000070c  SD14IV_L                              
+0000070d  SD14IV_H                              
+00000800  RF13MCTL                              
+00000800  RF13MCTL_L                            
+00000801  RF13MCTL_H                            
+00000802  RF13MINT                              
+00000802  RF13MINT_L                            
+00000803  RF13MINT_H                            
+00000804  RF13MIV                               
+00000804  RF13MIV_L                             
+00000805  RF13MIV_H                             
+00000806  RF13MRXF                              
+00000806  RF13MRXF_L                            
+00000807  RF13MRXF_H                            
+00000808  RF13MTXF                              
+00000808  RF13MTXF_L                            
+00000809  RF13MTXF_H                            
+0000080a  RF13MCRC                              
+0000080a  RF13MCRC_L                            
+0000080b  RF13MCRC_H                            
+0000080c  RF13MFIFOFL                           
+0000080c  RF13MFIFOFL_L                         
+0000080d  RF13MFIFOFL_H                         
+0000080e  RF13MWMCFG                            
+0000080e  RF13MWMCFG_L                          
+0000080f  RF13MWMCFG_H                          
+00000820  RF13MRXBUF                            
+00000820  RF13MRXBUF_L                          
+00000821  RF13MRXBUF_H                          
+00000840  RF13MTXBUF                            
+00000840  RF13MTXBUF_L                          
+00000841  RF13MTXBUF_H                          
+00001a08  UID_0                                 
+00001a09  UID_1                                 
+00001a0a  UID_2                                 
+00001a0b  UID_3                                 
+00001a0c  UID_4                                 
+00001a0d  UID_5                                 
+00001c00  DS                                    
+00001c0a  PF                                    
+00001c6a  RF                                    
+00001ca4  NRX                                   
+00001cc6  NTX                                   
+00001cf2  EL                                    
+00002b9c  _stack                                
+00002c00  __STACK_END                           
+000054d0  RF13M_ISR                             
+0000f867  Firmware_System_Control_Byte          
+0000f868  NFC_NDEF_Message                      
+0000f900  __TI_Handler_Table_Base               
+0000f902  __TI_CINIT_Base                       
+0000f902  __TI_Handler_Table_Limit              
+0000f932  __TI_CINIT_Limit                      
+0000f932  main                                  
+0000fa16  GetSystemInfo_Patched                 
+0000fa60  GetMultipleBlockSecurityStatus_Patched
+0000faa6  __TI_auto_init_nobinit_nopinit        
+0000fae8  BlockLockROM_Patched                  
+0000fb24  DeviceInit                            
+0000fb60  userCustomCommand                     
+0000fb90  __mspabi_divi                         
+0000fb90  __mspabi_remi                         
+0000fbbc  initISO15693                          
+0000fbde  _c_int00_noargs                       
+0000fbfa  __mspabi_divu                         
+0000fbfa  __mspabi_remu                         
+0000fc10  __TI_zero_init_nomemset               
+0000fc24  memset                                
+0000fc38  __mspabi_mpyi                         
+0000fc38  __mspabi_mpyi_sw                      
+0000fc4c  __mspabi_func_epilog_7                
+0000fc4e  __mspabi_func_epilog_6                
+0000fc50  __mspabi_func_epilog_5                
+0000fc52  __mspabi_func_epilog_4                
+0000fc54  __mspabi_func_epilog_3                
+0000fc56  __mspabi_func_epilog_2                
+0000fc58  __mspabi_func_epilog_1                
+0000fc5c  __TI_ISR_TRAP                         
+0000fc64  C$$EXIT                               
+0000fc64  abort                                 
+0000fc6a  BlockLockAPI                          
+0000fc6e  _system_pre_init                      
+0000fc72  _system_post_cinit                    
+0000ffbc  END_KEY                               
+0000ffbe  BlockLockROMAddress                   
+0000ffc0  BlockLockROMID                        
+0000ffc2  GetMultipleBlockSecurityStatusAddress 
+0000ffc4  GetMultipleBlockSecurityStatusID      
+0000ffc6  GetSystemInfoAddress                  
+0000ffc8  GetSystemInfoID                       
+0000ffca  CustomCommandAddress                  
+0000ffcc  CustomCommandID                       
+0000ffce  START_KEY                             
+0000ffea  __TI_int05                            
+0000ffec  __TI_int06                            
+0000ffee  __TI_int07                            
+0000fff0  __TI_int08                            
+0000fff2  __TI_int09                            
+0000fff4  __TI_int10                            
+0000fff6  __TI_int11                            
+0000fff8  __TI_int12                            
+0000fffa  __TI_int13                            
+0000fffc  __TI_int14                            
+0000fffe  _reset_vector                         
+ffffffff  __TI_pprof_out_hndl                   
+ffffffff  __TI_prof_data_size                   
+ffffffff  __TI_prof_data_start                  
+ffffffff  __c_args__                            
+
+[315 symbols]
